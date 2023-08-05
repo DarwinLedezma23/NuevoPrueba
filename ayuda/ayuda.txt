@@ -1,0 +1,30 @@
+or push an existing repository from the command line
+git remote add origin git@github.com:DarwinLedezma23/NuevoPrueba.git
+git branch -M main
+git push -u origin main 
+
+
+
+
+
+
+
+para que funcione 
+
+
+Verifica la clave SSH: Asegúrate de que la clave SSH que estás utilizando en tu máquina local sea la correcta y esté asociada con tu cuenta de GitHub. Puedes seguir los pasos mencionados anteriormente para verificar y agregar la clave correcta en tu cuenta de GitHub.
+
+Inicia el agente SSH: Asegúrate de que el agente SSH esté en funcionamiento en tu máquina local y que la clave SSH se haya agregado al agente. Puedes iniciar el agente SSH ejecutando el siguiente comando:
+
+bash
+Copy code
+eval "$(ssh-agent -s)"
+Luego, agrega la clave SSH al agente usando el comando:
+
+javascript
+Copy code
+ssh-add ~/.ssh/darwincontra
+Verifica la configuración remota: Asegúrate de que la URL remota de tu repositorio en tu máquina local esté configurada correctamente. Puedes verificar la URL remota ejecutando el siguiente comando:
+Copy code
+git remote -v
+Si la URL está configurada para usar SSH, debe tener el formato git@github.com:usuario/nombre-repositorio.git
